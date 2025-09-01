@@ -68,16 +68,39 @@ app.post('/api/chat', async (req, res) => {
 		if (provider === 'google' || provider === 'gemini') {
 			if (!GOOGLE_KEY) return res.status(500).json({ error: 'GOOGLE_API_KEY not set' });
 
-			const prompt = messagesToPrompt(enhancedMessages);
-			const url = `https://generativelanguage.googleapis.com/v1beta2/models/${encodeURIComponent(model)}:generateText?key=${GOOGLE_KEY}`;
-			const body = { prompt: { text: prompt }, maxOutputTokens: maxTokens };
+			// Use the current Gemini API format
+			const modelName = model || 'gemini-pro';
+			const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${GOOGLE_KEY}`;
+			
+			// Convert messages to Gemini format
+			const contents = enhancedMessages.filter(m => m.role !== 'system').map(msg => ({
+				role: msg.role === 'assistant' ? 'model' : 'user',
+				parts: [{ text: msg.content }]
+			}));
+
+			// Add system message as first user message if exists
+			const systemMsg = enhancedMessages.find(m => m.role === 'system');
+			if (systemMsg) {
+				contents.unshift({
+					role: 'user',
+					parts: [{ text: `System instructions: ${systemMsg.content}` }]
+				});
+			}
+
+			const body = {
+				contents,
+				generationConfig: {
+					maxOutputTokens: maxTokens,
+					temperature: 0.7
+				}
+			};
 
 			const r = await axios.post(url, body, {
 				headers: { 'Content-Type': 'application/json' }
 			});
 
 			const candidates = r.data?.candidates || [];
-			const reply = (candidates[0] && candidates[0].output) || '';
+			const reply = candidates[0]?.content?.parts?.[0]?.text || '';
 			return res.json({ provider: 'google', reply, raw: r.data });
 		}
 

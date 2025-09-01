@@ -1,10 +1,12 @@
 # 🌟 Gyani - Your AI-Powered Financial Education Companion
 
-**Enhancing Retail Investor Education and Engagement**
+**Making Finance Learning Fun and Accessible**
 
-Gyani is a comprehensive, submission-ready financial education platform that addresses the critical need for accessible investment education in India. Built to solve the problem of retail investors lacking knowledge to navigate securities markets, this platform combines AI-powered guidance with interactive learning, virtual trading, and multilingual support.
-
+Gyani is a friendly financial education platform that helps retail investors learn about investing and personal finance in an encouraging, judgment-free environment. Built to solve the problem of retail investors lacking knowledge to navigate securities markets, this platform combines AI-powered guidance with interactive learning and educational tools.
+### logo
 ![Gyani Logo](src/assets/gyani-mascot.jpg)
+### Screenshot
+![Demo Screenshot](src/assets/demo-screenshot.png)
 
 ## 🎯 Problem Statement
 
@@ -13,61 +15,41 @@ Many retail investors lack the knowledge to navigate the securities market, lead
 ## 💡 Solution
 
 Gyani provides:
-- **Interactive Education**: Comprehensive modules covering stock market basics to advanced strategies
-- **AI-Powered Guidance**: Personalized learning with Gyani, your friendly financial companion
-- **Virtual Trading**: Risk-free practice with simulated market data
-- **Multilingual Support**: Content available in English, Hindi, and Telugu
+- **AI-Powered Chat**: Friendly, encouraging AI companion for personalized financial guidance
+- **Interactive Education**: Learning modules covering stock market basics and investment strategies
+- **Virtual Trading**: Risk-free practice with simulated portfolio management
 - **Risk Assessment**: Personalized investment recommendations based on risk profile
-- **Real-time Market Simulation**: Educational market data for hands-on learning
+- **Progress Tracking**: Visual dashboard to track your learning journey
+- **Multilingual Support**: Interface available in English, Hindi, and Telugu
 
 ## 🚀 Key Features
 
 ### 🤖 AI-Powered Learning Assistant
 - **Gyani Chat**: Friendly, encouraging AI companion with personality
 - **Multi-Provider Support**: OpenAI GPT-4 and Google Gemini integration with fallbacks
-- **Contextual Learning**: Personalized responses based on user's progress
+- **Demo Mode**: Works without API keys using built-in responses
 - **Indian Market Focus**: Specialized knowledge of NSE, BSE, SEBI regulations
-- **Multilingual Support**: Conversations in English, Hindi, and Telugu
+- **Encouraging Tone**: Patient, supportive guidance without judgment
 
-### 📚 Comprehensive Educational Content
-- **10 Learning Modules**: From basics to advanced investment strategies
-- **Interactive Quizzes**: Knowledge testing with detailed explanations
-- **Progress Tracking**: Visual completion statistics and achievements
-- **Gamified Learning**: Badges, streaks, and milestone celebrations
-- **Official Resources**: Links to SEBI, NSE, BSE educational materials
+### 📚 Educational Content
+- **Learning Modules**: Stock market basics and investment strategies
+- **Interactive Quizzes**: Knowledge testing with explanations
+- **Progress Tracking**: Visual completion statistics
+- **Financial Health Check**: Comprehensive assessment tool
+- **Risk Assessment**: Personalized investment recommendations
 
-### 📊 Advanced Assessment Tools
-- **Financial Health Check**: 8-category comprehensive assessment
-- **Risk Profiling**: Advanced questionnaire with personalized recommendations
-- **Portfolio Suggestions**: Asset allocation based on risk tolerance
-- **Progress Analytics**: Detailed learning insights and category breakdowns
+### � AVirtual Trading Platform
+- **Portfolio Simulation**: Practice trading with virtual money
+- **Market Data Simulation**: Educational stock price simulation
+- **Transaction Tracking**: Record of virtual trades
+- **Performance Analytics**: Basic P&L tracking
 
-### 💹 Virtual Trading Platform
-- **Real-time Simulation**: Live market data simulation for practice
-- **Portfolio Management**: Buy/sell stocks with virtual ₹1,00,000
-- **Transaction History**: Complete trading records and performance analytics
-- **Watchlist Management**: Track favorite stocks and market movements
-- **Performance Metrics**: P&L tracking, win rates, and portfolio analysis
-
-### 🌐 Market Data & News
-- **Live Market Simulator**: Real-time price updates for educational purposes
-- **Market Indices**: NIFTY 50, SENSEX, sectoral indices with live data
-- **News Feed**: Categorized market news with impact analysis
-- **Stock Information**: Detailed company data, P/E ratios, market cap
-
-### 🎯 Personalization & Analytics
-- **Learning Dashboard**: Comprehensive progress visualization
-- **Achievement System**: Gamified learning with badges and rewards
-- **Personalized Recommendations**: AI-driven next steps
-- **Category-wise Progress**: Detailed breakdown of learning areas
-- **Time Tracking**: Learning duration and efficiency metrics
-
-### 🛡️ Security & Performance
-- **Secure API Management**: Environment-based configuration
-- **Data Persistence**: Local storage for progress and preferences
-- **Responsive Design**: Mobile-first, cross-device compatibility
-- **Error Handling**: Graceful degradation and user-friendly messages
-- **Performance Optimization**: Fast loading and smooth interactions
+### 🎯 User Experience
+- **Learning Dashboard**: Progress visualization and achievements
+- **Multilingual Interface**: English, Hindi, and Telugu support
+- **Responsive Design**: Works on desktop and mobile
+- **Local Storage**: Progress saved in browser
+- **Intuitive Navigation**: Easy-to-use tabbed interface
 
 ## 🛠️ Technology Stack
 
@@ -107,7 +89,7 @@ Before running this project, make sure you have:
 ### 1. Clone and Install
 ```bash
 # Clone the repository
-git clone https://github.com/Anshulmehra001/gyani.git
+git clone https://github.com/Anshulmehra001/gyani-finance-friend.git
 cd gyani-finance-friend
 
 # Install all dependencies
@@ -158,19 +140,19 @@ gyani-finance-friend/
 │   ├── 📁 components/        # React components
 │   │   ├── 📁 ui/           # shadcn/ui components
 │   │   ├── GyaniChat.tsx    # AI chat interface
-│   │   ├── StockMarketEducation.tsx
-│   │   ├── ProgressDashboard.tsx
-│   │   ├── VirtualTradingPlatform.tsx
-│   │   └── ...
-│   ├── 📁 pages/            # Page components
-│   ├── 📁 hooks/            # Custom React hooks
-│   ├── 📁 lib/              # Utility functions
-│   ├── 📁 i18n/             # Internationalization
-│   └── 📁 assets/           # Images and static files
+│   │   ├── StockMarketEducation.tsx # Learning modules
+│   │   ├── ProgressDashboard.tsx    # Progress tracking
+│   │   ├── VirtualTradingPlatform.tsx # Trading simulation
+│   │   ├── RiskAssessmentTool.tsx   # Risk profiling
+│   │   ├── FinancialHealthCheck.tsx # Health assessment
+│   │   ├── QuizSystem.tsx           # Interactive quizzes
+│   │   └── MarketDataSimulator.tsx  # Market data simulation
+│   ├── 📁 pages/            # Page components (Index, NotFound)
+│   ├── 📁 i18n/             # Internationalization files
+│   └── �k assets/           # Images and static files
 ├── 📄 package.json          # Dependencies and scripts
 ├── 📄 vite.config.ts        # Vite configuration
 ├── 📄 tailwind.config.ts    # Tailwind CSS configuration
-├── 📄 tsconfig.json         # TypeScript configuration
 ├── 📄 .env.example          # Environment variables template
 └── 📄 README.md             # This file
 ```
@@ -179,24 +161,24 @@ gyani-finance-friend/
 
 ### Getting Started
 1. **Welcome Screen**: Introduction to Gyani and key features
-2. **Financial Health Check**: Optional assessment to personalize experience
+2. **Financial Health Check**: Optional assessment to understand your financial situation
 3. **Choose Your Path**: 
-   - Chat with Gyani for personalized guidance
-   - Explore learning modules
-   - Try virtual trading
+   - Chat with Gyani for friendly financial guidance
+   - Explore learning modules about investing basics
+   - Try virtual trading simulation
    - Check your progress dashboard
 
-### Learning Modules
-- **Progressive Learning**: Start with basics and advance to complex topics
-- **Interactive Content**: Engaging explanations with real-world examples
-- **Progress Tracking**: Visual indicators of completion and mastery
-- **Official Resources**: Links to SEBI, NSE, and BSE educational materials
+### Learning Features
+- **Educational Modules**: Learn stock market basics and investment concepts
+- **Interactive Quizzes**: Test your knowledge with multiple-choice questions
+- **Progress Tracking**: See your learning progress visually
+- **Risk Assessment**: Understand your risk tolerance
 
 ### AI Chat Features
-- **Natural Conversations**: Ask questions in plain English
-- **Contextual Responses**: Answers tailored to your learning level
-- **Encouraging Tone**: Supportive and patient guidance
-- **Indian Market Focus**: Specific knowledge of Indian financial markets
+- **Friendly Conversations**: Ask questions in plain English
+- **Encouraging Responses**: Patient, supportive guidance without judgment
+- **Demo Mode**: Works even without API keys using built-in responses
+- **Indian Market Context**: Basic knowledge of NSE, BSE, and SEBI
 
 ## 🔧 Configuration
 
@@ -218,7 +200,7 @@ PORT=3000
 
 # Example Model Names
 # OpenAI: gpt-4o, gpt-4o-mini, gpt-3.5-turbo
-# Google: text-bison-001, gemini-pro
+# Google: gemini-pro, gemini-1.5-flash
 ```
 
 ## 🧪 Available Scripts
@@ -353,19 +335,12 @@ npm install
 
 ## 📚 Educational Content
 
-### Learning Modules Covered
-- **Stock Market Fundamentals**
-- **Investment Strategies**
-- **Risk Management**
-- **Technical Analysis**
-- **Fundamental Analysis**
-- **Portfolio Management**
-- **Indian Market Specifics**
-
-### Official Resources Integration
-- **SEBI Guidelines**: Links to official investor education
-- **NSE Academy**: Certification courses
-- **BSE Institute**: Professional trading courses
+### Learning Modules Available
+- **Stock Market Fundamentals**: Basic concepts and terminology
+- **Investment Strategies**: Different approaches to investing
+- **Risk Management**: Understanding and managing investment risks
+- **Portfolio Basics**: Introduction to portfolio management
+- **Indian Market Context**: NSE, BSE, and SEBI basics
 
 ## 🔒 Security
 
