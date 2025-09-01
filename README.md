@@ -107,7 +107,7 @@ Before running this project, make sure you have:
 ### 1. Clone and Install
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/Anshulmehra001/gyani.git
 cd gyani-finance-friend
 
 # Install all dependencies
