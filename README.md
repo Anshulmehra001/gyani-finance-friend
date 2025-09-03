@@ -3,8 +3,10 @@
 **Enhancing Retail Investor Education and Engagement**
 
 Gyani is a comprehensive, submission-ready financial education platform that addresses the critical need for accessible investment education in India. Built to solve the problem of retail investors lacking knowledge to navigate securities markets, this platform combines AI-powered guidance with interactive learning, virtual trading, and multilingual support.
-
+### logo
 ![Gyani Logo](src/assets/gyani-mascot.jpg)
+### screenshot
+![demo screenshot](src/assets/demo-screenshot.png)
 
 ## 🎯 Problem Statement
 
