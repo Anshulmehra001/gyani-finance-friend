@@ -395,11 +395,8 @@ Need help? Here are your options:
 
 1. **Check this README** for common solutions
 2. **Open an Issue** on GitHub for bugs
-3. **Start a Discussion** for questions
-4. **Check the Wiki** for detailed guides
+
 
 ---
-
-**Made with ❤️ for financial education in India**
 
 *Gyani - Making finance accessible, one conversation at a time* 🌟
